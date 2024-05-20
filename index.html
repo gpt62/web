@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전자공학기초실험 ChatGPT 활용하기</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px; /* Smaller font size */
+            line-height: 1.6;
+        }
+        header {
+            background-color: #f8f9fa;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        header .navbar-brand {
+            font-weight: 500;
+        }
+        .hero {
+            background: url('https://source.unsplash.com/1600x900/?technology,engineering') no-repeat center center;
+            background-size: cover;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            position: relative;
+        }
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+        }
+        .hero .container {
+            position: relative;
+            z-index: 1;
+        }
+        .hero h1 {
+            font-size: 2.5rem; /* Smaller font size */
+            font-weight: 700;
+        }
+        .hero p {
+            font-size: 1.25rem; /* Smaller font size */
+            font-weight: 300;
+        }
+        .content-section {
+            padding: 60px 0;
+        }
+        .content-section h2 {
+            font-size: 2rem; /* Smaller font size */
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+        .content-section p {
+            font-size: 1rem; /* Smaller font size */
+        }
+        .card-title {
+            font-size: 1.25rem; /* Smaller font size */
+            font-weight: 500;
+        }
+        .card-subtitle {
+            font-size: 1rem; /* Smaller font size */
+            font-weight: 300;
+        }
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+            text-align: center;
+            border-top: 1px solid #ddd;
+        }
+        .footer p {
+            margin: 0;
+            font-size: 0.875rem; /* Smaller font size */
+        }
+        .chat-container {
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+        }
+        .chat-box {
+            height: 150px;
+            overflow-y: scroll;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: white;
+        }
+        .chat-box p {
+            margin: 0;
+        }
+        #user-input {
+            width: calc(100% - 90px); /* Adjust input width */
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light container">
+            <a class="navbar-brand" href="#">전자공학기초실험</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="container">
+            <h1 class="display-4">전자공학기초실험 ChatGPT 활용하기</h1>
+            <p class="lead">Web page 제작을 돕는 ChatGPT</p>
+        </div>
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="container content-section">
+        <h2>About ChatGPT</h2>
+        <p>ChatGPT is an AI developed by OpenAI that helps you build web pages and more with ease.</p>
+    </div>
+
+    <!-- Cards Section -->
+    <div class="container content-section">
+        <div class="row">
+            <!-- Card 1 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://source.unsplash.com/400x200/?artificial-intelligence" class="card-img-top" alt="인공지능">
+                    <div class="card-body">
+                        <h5 class="card-title">인공지능</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">ChatGPT</h6>
+                        <p class="card-text">version 4.0의 등장</p>
+                        <a href="https://openai.com/index/gpt-4/" class="btn btn-primary">Learn more</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://source.unsplash.com/400x200/?programming" class="card-img-top" alt="프로그래밍">
+                    <div class="card-body">
+                        <h5 class="card-title">프로그래밍</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">코드 작성</h6>
+                        <p class="card-text">ChatGPT의 도움받기</p>
+                        <a href="https://chat.openai.com/" class="btn btn-primary">Learn more</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://source.unsplash.com/400x200/?technology" class="card-img-top" alt="기술">
+                    <div class="card-body">
+                        <h5 class="card-title">미래 기술</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">최신 트렌드</h6>
+                        <p class="card-text">끝없이 발전하는 인공지능</p>
+                        <a href="https://example.com" class="btn btn-primary">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Section -->
+    <div class="container content-section">
+        <h2>ChatGPT 구현 영상</h2>
+        <video controls class="w-100">
+            <source src="my-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Chat Section -->
+    <div class="container content-section">
+        <h2>Chat</h2>
+        <div class="chat-container">
+            <div class="chat-box" id="chat-box">
+                <!-- 채팅 내용이 표시될 곳 -->
+            </div>
+            <input type="text" id="user-input" placeholder="메시지를 입력하세요..." class="form-control d-inline-block">
+            <button onclick="sendMessage()" class="btn btn-primary">전송</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 전자공학기초실험. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <!-- Chat Script -->
+    <script>
+        function sendMessage() {
+            var userInput = document.getElementById("user-input").value;
+            var chatBox = document.getElementById("chat-box");
+            var newMessage = document.createElement("p");
+            newMessage.textContent = userInput;
+            chatBox.appendChild(newMessage);
+            document.getElementById("user-input").value = ""; // 입력 필드 초기화
+        }
+    </script>
+</body>
+</html>
